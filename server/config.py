@@ -17,6 +17,11 @@ TOOLS = [{"type": "browser_search"}]
 HOST = "127.0.0.1"
 PORT = 5001  # not 5000, macOS AirPlay already uses it
 
+MAX_DOCUMENT_UPLOAD_BYTES = 5 * 1024 * 1024
+MAX_DOCUMENT_TEXT_CHARS = 80_000
+MAX_DOCUMENT_UNCOMPRESSED_BYTES = 20 * 1024 * 1024
+MAX_STORED_DOCUMENTS = 20
+
 CHECK_SECONDS = 2  # how often we peek at the active window
 
 SYSTEM_PROMPT = """You are Jyan, a friendly sprite who lives on the user's computer and

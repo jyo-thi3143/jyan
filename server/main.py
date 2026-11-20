@@ -5,19 +5,29 @@ Debug:  python main.py windows    -> prints the active window every 2s,
 import sys
 import time
 
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS
+from werkzeug.exceptions import RequestEntityTooLarge
 
-from config import HOST, PORT
+from config import HOST, MAX_DOCUMENT_UPLOAD_BYTES, PORT
 from routes.chat_routes import chat_bp
+from routes.document_routes import document_bp
 from routes.timer_routes import timer_bp
 
 
 def create_app():
     app = Flask(__name__)
+    # Leave room for multipart headers while enforcing the actual file limit in the document service.
+    app.config["MAX_CONTENT_LENGTH"] = MAX_DOCUMENT_UPLOAD_BYTES + 64 * 1024
     CORS(app)  # lets the client (a different port) call us
     app.register_blueprint(chat_bp)
+    app.register_blueprint(document_bp)
     app.register_blueprint(timer_bp)
+
+    @app.errorhandler(RequestEntityTooLarge)
+    def handle_request_too_large(_error):
+        return jsonify(error="Upload too large. DOCX files must be 5 MB or smaller."), 413
+
     return app
 
 
