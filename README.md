@@ -1,5 +1,7 @@
 # JYAN
 
+live demo : https://jyan-zeta.vercel.app/
+
 JYAN is a desktop AI assistant designed to help users interact with their computer through a simple, friendly interface.
 
 JYAN combines an AI chat experience with desktop utilities and, eventually, system-level capabilities such as application control, file access, and focus monitoring.
