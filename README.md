@@ -1,38 +1,30 @@
 # JYAN
 
-> **Your desktop. Your rules.**
-
 JYAN is a desktop AI assistant designed to help users interact with their computer through a simple, friendly interface.
 
-JYAN combines an AI chat experience with desktop utilities and, eventually, system-level capabilities such as application control, file access, and security monitoring.
+JYAN combines an AI chat experience with desktop utilities and, eventually, system-level capabilities such as application control, file access, and focus monitoring.
 
-## ✨ Features
+## Features
 
-### 💬 AI Assistant
+### AI Assistant
 
 Chat with JYAN through a friendly desktop companion interface.
 
-### ⏱ Timer
+### Timer
 
 Set, start, pause, and reset countdown timers directly from JYAN.
 
-### 📁 Files
+### Files
 
-Browse and interact with files through the JYAN interface.
+Browse and extract from the files through the JYAN interface.
 
-> The current version contains a frontend prototype. Real desktop file-system access will be implemented through the backend.
+### Focus Monitoring 
 
-### 🛡 Security
-
-A security dashboard designed to provide visibility into desktop activity and potential security events.
-
-> Security monitoring is currently a frontend prototype. Real application/process monitoring will be implemented through the backend.
+A focus monitor that turns on for a default 25 minutes, that keeps track the amount of times you distract yourself during a session.
 
 ### 🐞 Desktop Companion
 
 A draggable JYAN mascot that acts as the entry point to the assistant.
-
-## 🛠️ Tech Stack
 
 ### Frontend
 
@@ -44,13 +36,9 @@ A draggable JYAN mascot that acts as the entry point to the assistant.
 ### Backend
 
 - Python
-- FastAPI
+- Groq
 
-### AI
-
-- AI API integration — coming soon
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -94,58 +82,3 @@ http://localhost:5173/
 ```
 
 Open that URL in your browser to launch JYAN.
-
-> The backend is currently under development. Once the Python/FastAPI server is added, additional setup instructions will be provided here.
-
-## 📂 Project Structure
-
-```text
-jyan/
-├── README.md
-├── client/
-│   └── React + TypeScript frontend
-└── server/
-    └── Python + FastAPI backend
-```
-
-## 🚧 Current Status
-
-JYAN is currently under active development.
-
-### Frontend
-
-- [ ] Desktop companion mascot
-- [ ] Draggable mascot
-- [ ] Chat interface
-- [ ] Sidebar navigation
-- [ ] Functional timer
-- [ ] Files interface prototype
-- [ ] Security dashboard prototype
-- [ ] Responsive frontend interactions
-
-### Backend
-
-- [ ] FastAPI server
-- [ ] AI integration
-- [ ] API connection with frontend
-- [ ] Desktop application control
-- [ ] Real file-system interaction
-- [ ] Application/process monitoring
-- [ ] Security event detection
-
-## 👥 Team
-
-**Jyo** — Frontend
-React, TypeScript, Vite, UI/UX
-
-**Nissie** — Backend
-Python, FastAPI, backend services
-
-## 🎯 Vision
-
-JYAN is being built as more than a chatbot.
-
-The goal is to create a desktop AI companion that can understand user requests and safely interact with the user's computer while keeping the user in control.
-
-> **Your desktop. Your rules.**
-
